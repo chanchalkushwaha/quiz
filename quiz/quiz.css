@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:20px;overflow-y:auto;
+}
+
+#message{
+    font-size:16px;
+    font-weight:500;color:white;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+/* FRONT PAGE */
+#front-page{
+    max-width:900px;
+    width:100%;
+    margin-top:20px;
+    text-align:center;
+}
+
+.topic-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.topic-card{
+    width:180px;
+    height:150px;
+    background:rgba(255,255,255,0.9);
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+    text-align:center;
+    box-shadow:0 12px 28px rgba(0,0,0,0.25);
+}
+
+.topic-card:hover{
+    transform:translateY(-5px) scale(1.08);
+    background:rgba(255,255,255,1);
+}
+
+.topic-card.selected{
+    border:3px solid #667eea;
+}
+
+#start-quiz{
+    margin-top:25px;
+    padding:16px 32px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+    color:#fff;
+    transition:0.3s;
+}
+
+#start-quiz:hover{
+    transform:scale(1.08);
+}
+
+/* QUIZ PAGE */
+#quiz-page{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:rgba(255,255,255,0.95);
+    padding:28px;
+    border-radius:18px;
+    max-width:700px;
+    width:100%;
+    box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+
+#quiz-topic{
+    margin-bottom:15px;
+    font-size:24px;
+    font-weight:600;
+}
+
+#quiz-stats{
+    margin-bottom:15px;
+    font-weight:600;
+    font-size:16px;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    align-items:center;
+}
+
+#score-stats{
+    display:flex;
+    gap:20px;
+    font-size:18px;
+}
+
+.correct{
+    color:green;
+    font-weight:600;
+}
+
+.wrong{
+    color:red;
+    font-weight:600;
+}
+
+#question-container{
+    background:rgba(245,245,245,0.95);
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:10px;
+    width:100%;
+}
+#options-container{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:10px;
+}
+.option-btn{
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    transition:0.2s;
+    background:#667eea;
+    color:#fff;
+    font-weight:500;
+    font-size:16px;
+}
+.option-btn:hover{
+    transform:scale(1.05);
+    background:#5a6ddc;
+}
+
+
+.topic-card {
+    transition: all 0.4s ease;
+}
+
+/* jab topic select ho */
+.topic-card.selected {
+    transform: scale(1.2);   /* size increase */
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    z-index: 5;
+}
+
+/* baaki hidden topics ke liye */
+.topic-card.hide {
+    opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none;
+}
+
+/* ---------- RESULT SCREEN ---------- */
+
+
+
+
+/* Card */
+.result-card {
+    background: #f9f9ff;
+    padding: 40px 60px;
+    border-radius: 22px;
+    text-align: center;
+    min-width: 420px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    animation: pop 0.5s ease;
+}
+
+/* Heading */
+.result-card h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Result text */
+.result {
+    font-size: 22px;
+    margin: 14px 0;       /* GAP FIX */
+    font-weight: 600;
+}
+
+.result span {
+    margin-left: 8px;
+}
+
+/* Colors */
+.correct {
+    color: #0aa84f;
+}
+
+.wrong {
+    color: #e63946;
+}
+
+/* Restart Button */
+.restart-btn {
+    margin-top: 30px;
+    padding: 14px 38px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.restart-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Small animation */
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.result-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}

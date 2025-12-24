@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<!-- FRONT PAGE -->
+<div id="front-page">
+    <div id="message">
+        <h1>Select a topic</h1>
+    </div>
+    
+    <div class="topic-container">
+        <div class="topic-card" data-topic="math"><h2>Math</h2></div>
+        <div class="topic-card" data-topic="science"><h2>Science</h2></div>
+        <div class="topic-card" data-topic="history"><h2>History</h2></div>
+        <div class="topic-card" data-topic="movies"><h2>Movies</h2></div>
+        <div class="topic-card" data-topic="geography"><h2>Geography</h2></div>
+        <div class="topic-card" data-topic="computers"><h2>Computers</h2></div>
+    </div>
+    <button id="start-quiz" style="display:none;">Start Quiz</button>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="quiz-page" style="display:none;">
+    <h2 id="quiz-topic">Topic</h2>
+    <div id="quiz-stats">
+        <span id="current-q">0</span>/<span id="total-q">0</span> Questions
+        <div id="score-stats">
+            <span class="correct">✅ Correct: <span id="correct-q">0</span></span>
+            <span class="wrong">❌ Wrong: <span id="wrong-q">0</span></span>
+        </div>
+    </div>
+    <div id="question-container">
+        <p id="question-text"></p>
+        <div id="options-container"></div>
+    </div>
+</div>
+<div id="result-page" style="display:none;"></div>
+
+
+<!-- <div class="result-container">
+    <div class="result-card">
+        <h2>Quiz Over!</h2>
+
+        <p class="result correct">✅ Correct: <span>1</span></p>
+        <p class="result wrong">❌ Wrong: <span>9</span></p>
+
+        <button class="restart-btn" onclick="location.reload()">Restart Quiz</button>
+    </div>
+</div> -->
+
+
+<script src="quiz.js"></script>
+</body>
+</html>
